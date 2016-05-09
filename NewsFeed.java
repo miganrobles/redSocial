@@ -29,7 +29,7 @@ public class NewsFeed
     {
         messages.add(message);
     }
-    
+
     /**
      * Añade um PhotoPost a nuestra coleccion
      */
@@ -37,18 +37,22 @@ public class NewsFeed
     {
         photos.add(photo);
     }
-    
+
     /**
      * Muestra primero los post de texto y después los post de foto 
      */
     public void show()
     {
+        System.out.println("Mensajes emtidos en el post:\n");
         for (MessagePost message : messages) {
             message.display();
+            System.out.println();
         }
-        
+
+        System.out.println("Imagenes de los post:\n");
         for (PhotoPost photo: photos) {
             photo.display();
+            System.out.println();
         }
     }
 }
