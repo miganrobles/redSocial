@@ -82,9 +82,9 @@ public class MessagePost
         System.out.println("Nombre de autor: " + username);
         System.out.println("Texto del mensaje: " + message);
         System.out.println("Número de me gustas: " + likes);
-        timeString(System.currentTimeMillis());
+        System.out.println(timeString(System.currentTimeMillis()));
         if (!comments.isEmpty()) {
-            System.out.println("Comentarios de usuarios añadidos al post:\n");
+            System.out.println("Comentarios de usuarios añadidos al post:");
             for (String text : comments) {;
                 System.out.println(text);
             }

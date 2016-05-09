@@ -96,9 +96,9 @@ public class PhotoPost
         System.out.println("Nombre de la imagen: " + filename);
         System.out.println("Caption: " + caption);
         System.out.println("Número de me gustas: " + likes);
-        timeString(System.currentTimeMillis());
+        System.out.println(timeString(System.currentTimeMillis()));
         if (!comments.isEmpty()) {
-            System.out.println("Comentarios de usuarios añadidos al post:\n");
+            System.out.println("Comentarios de usuarios añadidos al post:");
             for (String text : comments) {;
                 System.out.println(text);
             }
