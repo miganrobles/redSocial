@@ -17,7 +17,7 @@ public class PhotoPost
     private String caption;
     // guarda el momento temporal en el que fue creado
     private long timestamp;
-    // guarda los me gusta
+    // guarda los me gusta el post
     private int likes;
     // Guarda los comentarios de los usuarios
     private ArrayList<String> comments;
@@ -114,22 +114,25 @@ public class PhotoPost
      */
     private String timeString(long time)
     {
+        final int SEGUNDOS_DIA = 86400;
+        final int SEGUNDOS_HORA = 3600;
+        final int SEGUNDOS_MINUTO = 60;
         long segundos = (time - timestamp) / 1000;
         String timeString = "El post se ha creado hace ";
-        if (segundos / 86400 > 0) {
-            timeString += (segundos / 86400) + " días ";
-            segundos = segundos % 86400;
+        if (segundos / SEGUNDOS_DIA > 0) {
+            timeString += (segundos / SEGUNDOS_DIA) + " día/s ";
+            segundos = segundos % SEGUNDOS_DIA;
         }
-        if (segundos / 3600 > 0) {
-            timeString += (segundos / 3600) +  " horas ";
-            segundos = segundos % 3600;
+        if (segundos / SEGUNDOS_HORA > 0) {
+            timeString += (segundos / SEGUNDOS_HORA) +  " hora/s ";
+            segundos = segundos % SEGUNDOS_HORA;
         }
-        if (segundos / 60 > 0) {
-            timeString += (segundos / 60) + " minutos ";
-            segundos = segundos % 60;
+        if (segundos / SEGUNDOS_MINUTO > 0) {
+            timeString += (segundos / SEGUNDOS_MINUTO) + " minuto/s ";
+            segundos = segundos % SEGUNDOS_MINUTO;
         }
         if (segundos > 0) {
-            timeString += segundos + " segundos ";
+            timeString += segundos + " segundo/s ";
         }
         return timeString;
     }

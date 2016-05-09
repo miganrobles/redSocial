@@ -43,7 +43,7 @@ public class NewsFeed
      */
     public void show()
     {
-        System.out.println("Mensajes emtidos en el post:\n");
+        System.out.println("Mensajes emtidos en los post:\n");
         for (MessagePost message : messages) {
             message.display();
             System.out.println();
